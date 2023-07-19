@@ -13,9 +13,9 @@
 
 				<!-- Header -->
 					<header id="header">
-						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
+						<span class="avatar"><img src="{{img}}">
 
-            <h1>Description</h1>
+            <h1>{{bio}}</h1>
             <br>
             <!-- About me button -->
             <a href="#"><button style="color:white;width:40%" >More about me</button></a>
@@ -37,19 +37,20 @@
 							<section class="thumbnails">
                 
                 <div>
+                	{% for p in posts%}
                       <a href="">
-                        <img src="static/images/thumbs/01.jpg" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <img src="{{p}}">
+                        <h3>{{posts[p]}}</h3>
                       </a>
-                
+                {%endfor%}
                       <a href="">
-                        <img src="url_for('static',filename='images/thumbs/02.jpg')" alt="" />
+                        <img src="url_for static,filename=images/thumbs/02.jpg">
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 </div>    
                 <div>
                   <a href="">
-                        <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
+                        <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}">
                         <h3>Caption... blah blah blah</h3>
                       </a>
                 </div>  
@@ -70,6 +71,7 @@
 			<script src="static/js/jquery.poptrox.min.js"></script>
 			<script src="static/js/skel.min.js"></script>
 			<script src="static/js/main.js"></script>
+     
 
 	</body>
 </html>
