@@ -26,12 +26,12 @@ posts = {
 
 @app.route('/')  # '/' for the default page
 def home():
-    return render_template('index.html',bio=user_bio, img=image_link,posts=posts)
+    return render_template('index.html',bio=user_bio, img=image_link)
 
 
 @app.route('/about')  # '/' for the default page
 def about():
-    return render_template('about.html' )
+    return render_template('about.html')
 
 
 if __name__ == "__main__":  # Makes sure this is the main process
